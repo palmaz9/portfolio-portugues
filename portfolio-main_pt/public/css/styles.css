@@ -1,0 +1,469 @@
+/* References Section Styles */
+.references-section {
+    display: flex;
+    justify-content: center; /* Center align the cards */
+    align-items: center; /* Vertically align items */
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Maximum width of the section */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding around the section */
+}
+
+/* Reference Card Styles */
+.reference-card {
+    background-color: #fff; /* Background color for the card */
+    width: 45%; /* Adjust width to fit two cards per row on larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text inside the card */
+    margin-bottom: 20px; /* Space below each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Initial transform for animation effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.reference-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: translateY(10px); /* Slight lift on hover */
+}
+
+.reference-card.visible {
+    transform: translateY(0); /* Move to normal position */
+    opacity: 1; /* Make visible */
+}
+
+.reference-card h3 {
+    color: #1a237e; /* Header color */
+    font-size: 1.5rem; /* Header font size */
+    margin-bottom: 10px; /* Space below header */
+}
+
+.reference-card p {
+    margin: 5px 0; /* Vertical margins */
+    font-size: 1rem; /* Paragraph font size */
+    color: #666; /* Text color */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .references-section {
+        justify-content: center; /* Center the cards */
+    }
+
+    .reference-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+        margin-bottom: 20px; /* Bottom margin */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reference-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+        margin-bottom: 20px; /* Bottom margin */
+    }
+}
+
+
+
+/* Project Cards Styles */
+.projects-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projects-section .project-card img.project-img {
+    display: block; /* Ensures the image behaves as a block element */
+    width: 75%; /* Ensures the image takes full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 200px; /* Sets a maximum height to maintain uniformity */
+    object-fit: cover; /* Ensures the image fills the container without stretching */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 auto 15px; /* Center the image horizontally, with space below */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover for interactivity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Project Card Styles */
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card h3 {
+    color: #1a237e;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.project-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .projects-section {
+        flex-direction: column;
+    }
+
+    .project-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add the new CSS class for animation */
+.card {
+    opacity: 0; /* Start with the card hidden */
+    transform: translateY(20px); /* Slightly move the card down */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Add a class for when the card is visible */
+.card.visible {
+    opacity: 1; /* Fade in the card */
+    transform: translateY(0); /* Move the card to its original position */
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap; /* Allows tabs to wrap in case they exceed container width */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8ac4ff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #3949ab, #5c6bc0);
+    color: white;
+    text-align: center;
+    padding: 15px 20px 60px;
+    margin-top: 80px; /* Align with header height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content p {
+        /* Reduce margin and padding for mobile screens */
+        margin: 10px; /* Adjust this value for desired spacing on mobile */
+        padding: 5px; /* Adjust this value for desired spacing on mobile */
+    }
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+/* Employment History and Other Sections */
+.employment-history,
+.skills-section,
+.education-section,
+.languages-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employment-history h3,
+.skills-section h3,
+.education-section h3,
+.languages-section h3 {
+    margin-top: 0;
+    color: #1a237e;
+    font-size: 1.8rem;
+}
+
+/* Card Styles */
+.employment-cards,
+.skills-cards,
+.education-cards,
+.languages-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-card,
+.skills-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    margin: 10px 0;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.institution-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.skills-card h4 {
+    color: #283593;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.skills-card ul li {
+    margin-bottom: 5px;
+}
+
+/* Education and Languages Cards */
+.education-box,
+.languages-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 45%;
+}
+
+.education-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.languages-box img {
+    width: 120px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 1px;
+}
+
+.education-box p,
+.languages-box p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #1a237e;
+    color: #fff;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #8ac4ff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content {
+        max-width: 50%;
+        padding: 10px;
+    }
+
+    .employment-cards,
+    .skills-cards,
+    .education-cards,
+    .languages-cards {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .experience-card,
+    .skills-card,
+    .education-box,
+    .languages-box {
+        min-width: 100%;
+    }
+
+    .education-box,
+    .languages-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}

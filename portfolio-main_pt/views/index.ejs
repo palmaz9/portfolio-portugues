@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Include Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add some animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Include jQuery for scroll effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Include ScrollMagic for scroll effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lucas Palma</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Introduction</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/references">References</a></li>
+            </ul>
+        </nav>
+    </header>
+        <section class="content">
+            <!-- Employment History Section -->
+            <div class="employment-history">
+                <h3>Employment History</h3>
+                <div class="employment-cards">
+                    <div class="experience-card card">
+                        <!-- Add the 'card' class -->
+                        <div class="experience-header">
+                            <a href="https://www.pittstate.edu/index.html" target="_blank">
+                                <img src="/images/pittstate.png" alt="Pittsburg State University Logo" class="institution-logo">
+                            </a>
+                            <p><strong>Graduate Teaching Assistant</strong><br>Pittsburg State University<br>10/2023 to 05/2024</p>
+                        </div>
+                        <ul>
+                            <li>Provided Excel technical support and Pivot Table training</li>
+                            <li>Developed a database analysis for student communication engagement</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card card">
+                        <!-- Add the 'card' class -->
+                        <div class="experience-header">
+                            <a href="https://www.braskem.com.br/usa" target="_blank">
+                                <img src="/images/braskem.png" alt="Braskem Logo" class="institution-logo">
+                            </a>
+                            <p><strong>Data Analyst Intern</strong><br>Braskem S.A.<br>11/2020 to 12/2021</p>
+                        </div>
+                        <ul>
+                            <li>Executed database cleaning, querying, and optimization tasks weekly</li>
+                            <li>Created visual dashboards using Power BI</li>
+                            <li>Developed a VBA algorithm to efficiently send auditing emails</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card card">
+                        <!-- Add the 'card' class -->
+                        <div class="experience-header">
+                            <a href="https://www.raizen.com.br/en" target="_blank">
+                                <img src="/images/raizen.png" alt="Raizen Logo" class="institution-logo">
+                            </a>
+                            <p><strong>Sales Analyst Intern</strong><br>Raizen S.A.<br>01/2018 to 03/2019</p>
+                        </div>
+                        <ul>
+                            <li>Manipulated Salesforce reports and conducted analysis using Pivot Tables</li>
+                            <li>Provided comprehensive reports for strategic decision-making</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3>Skills</h3>
+                <div class="skills-cards">
+                    <div class="skills-card card">
+                        <!-- Add the 'card' class -->
+                        <h4>Data Analysis & Visualization</h4>
+                        <ul>
+                            <li>SQL</li>
+                            <li>Power BI Development</li>
+                            <li>MS Excel</li>
+                            <li>R, RStudio</li>
+                            <li>MongoDB</li>
+                            <li>Machine Learning</li>
+                            <li>pandas, matplotlib, NumPy, scikit-learn</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-card card">
+                        <!-- Add the 'card' class -->
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Visual Basic</li>
+                            <li>Java</li>
+                            <li>Dart</li>
+                            <li>Google Apps Script</li>
+                            <li>HTML, CSS, JavaScript</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-card card">
+                        <!-- Add the 'card' class -->
+                        <h4>CRM & Business Tools</h4>
+                        <ul>
+                            <li>Salesforce</li>
+                            <li>Power BI</li>
+                            <li>Google Apps Script</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="education-section">
+                <h3>Education</h3>
+                <div class="education-cards">
+                    <div class="education-box card">
+                        <!-- Add the 'card' class -->
+                        <a href="https://www.pittstate.edu/index.html" target="_blank">
+                            <img src="/images/pittstate.png" alt="Pittsburg State University Logo" class="education-logo">
+                        </a>
+                        <p>Pittsburg State University</p>
+                        <p><strong>Master of Science in Technology<br> Emphasis in Information Technology</strong><br>05/2024<br>Pittsburg, Kansas, United States</p>
+                    </div>
+                    <div class="education-box card">
+                        <!-- Add the 'card' class -->
+                        <a href="https://www.unifacs.br/" target="_blank">
+                            <img src="/images/unifacs.jpg" alt="Salvador University Logo" class="education-logo">
+                        </a>
+                        <p>Salvador University</p>
+                        <p><strong>Bachelor of Business Administration</strong><br>12/2021<br>Salvador, Bahia, Brazil</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="languages-section">
+                <h3>Languages</h3>
+                <div class="languages-cards">
+                    <div class="languages-box card">
+                        <!-- Add the 'card' class -->
+                        <img src="/images/unitedStates.png" alt="USA Flag" class="flag">
+                        <p>English</p>
+                        <p><strong>Fluent</strong></p>
+                    </div>
+                    <div class="languages-box card">
+                        <!-- Add the 'card' class -->
+                        <img src="/images/brazil.png" alt="Brazil Flag" class="flag">
+                        <p>Portuguese</p>
+                        <p><strong>Native</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://linkedin.com/in/lpalma1999" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/palmaz9" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Lucas Palma. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Remove preventDefault for navigation links
+        $(document).ready(function () {
+            $('nav ul li a').on('click', function (event) {
+                if ($(this).attr('href').startsWith('#')) {
+                    event.preventDefault(); // Only prevent default for anchor links within the page
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top
+                    }, 1000);
+                }
+            });
+        });
+
+        // GSAP animations for cards
+        gsap.from(".employment-history", { duration: 1, y: 50, opacity: 0, delay: 0.5 });
+        gsap.from(".skills-section", { duration: 1, y: 50, opacity: 0, delay: 1 });
+        gsap.from(".education-section", { duration: 1, y: 50, opacity: 0, delay: 1.5 });
+        gsap.from(".languages-section", { duration: 1, y: 50, opacity: 0, delay: 2 });
+
+        // ScrollMagic to trigger animations on scroll
+        var controller = new ScrollMagic.Controller();
+
+        // Select all cards
+        var cards = document.querySelectorAll('.card');
+
+        // Add animation to each card
+        cards.forEach(function (card, index) {
+            var scene = new ScrollMagic.Scene({
+                triggerElement: card, // Each card is the trigger
+                triggerHook: 0.8, // Trigger the animation when the card is 80% visible
+                reverse: false // Do not reverse the animation when scrolling back
+            })
+            .setClassToggle(card, 'visible') // Add the 'visible' class
+            .addTo(controller); // Add scene to controller
+        });
+    </script>
+</body>
+
+</html>

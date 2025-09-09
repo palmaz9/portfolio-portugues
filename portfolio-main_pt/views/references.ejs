@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lucas Palma</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Introduction</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/references">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="references-section">
+            <div class="reference-card" id="reference1-card">
+                <a href="https://psuapps-lb.pittstate.edu/UniversityDirectory/Directory/Query?DepartmentCode=SSP" target="_blank" style="text-decoration: none; color: inherit;">
+                    <h3>Ashley Wadell</h3>
+                    <p>Director of First Year Programs<br>Pittsburg State University</p>
+                </a>
+            </div>
+            
+            <div class="reference-card" id="reference2-card">
+                <a href="https://psuapps-lb.pittstate.edu/UniversityDirectory/Directory/Query?DepartmentCode=SSP" target="_blank" style="text-decoration: none; color: inherit;">
+                    <h3>Jesse Briscoe</h3>
+                    <p>Assistant Director of First Year Programs<br>Pittsburg State University</p>
+                </a>
+            </div>            
+
+            <div class="reference-card" id="reference3-card">
+                <a href="https://www.pittstate.edu/business/faculty-and-staff/wei-sha.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <h3>Dr. Wei Sha</h3>
+                    <p>SQL Professor<br>Pittsburg State University</p>
+                </a>
+            </div>
+            
+            <div class="reference-card" id="reference4-card">
+                <a href="https://psuapps-lb.pittstate.edu/UniversityDirectory/Directory/Query?DepartmentCode=GITWL" target="_blank" style="text-decoration: none; color: inherit;">
+                    <h3>Dr. Derrel Fincher</h3>
+                    <p>MST Program Coordinator<br>Pittsburg State University</p>
+                </a>
+            </div>            
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://linkedin.com/in/lpalma1999" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/palmaz9" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Lucas Palma. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll(".reference-card");
+
+            // Function to check if an element is in viewport
+            const isInViewport = (element) => {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            };
+
+            // Add scroll event listener
+            const handleScroll = () => {
+                cards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.classList.add("visible");
+                    }
+                });
+            };
+
+            // Initial check
+            handleScroll();
+
+            // Listen for scroll events
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+</body>
+
+</html>
