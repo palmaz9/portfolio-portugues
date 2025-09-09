@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-nodejs-app",
+  "version": "1.0.0",
+  "description": "A personal portfolio website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Lucas Palma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
+  }
+}
