@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "homeTitle": "Lucas Palma | Salesforce Administrator & Data Analyst",
+    "homeDescription": "Portfolio of Lucas Palma: Salesforce reporting, SQL, Power BI dashboards and process automation. M.S. in Information Technology.",
+    "projectsTitle": "Projects | Lucas Palma",
+    "projectsDescription": "Case studies in automation, Power BI dashboards, a Node.js and MongoDB app, and machine learning.",
+    "credentialsTitle": "Credentials | Lucas Palma",
+    "credentialsDescription": "Publications, certifications and references for Lucas Palma.",
+    "notFoundTitle": "Page not found | Lucas Palma",
+    "errorTitle": "Something went wrong | Lucas Palma"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "credentials": "Credentials",
+    "label": "Main navigation",
+    "skip": "Skip to content",
+    "language": "Language",
+    "theme": "Toggle light/dark theme"
+  },
+  "hero": {
+    "eyebrow": "Salesforce Administrator & Data Analyst",
+    "headline": "I turn business data into decisions.",
+    "summary": "Salesforce reporting, SQL, Power BI dashboards and process automation, backed by an M.S. in Information Technology.",
+    "projects": "See my projects",
+    "resume": "Download résumé",
+    "email": "Email me",
+    "photoAlt": "Portrait of Lucas Palma"
+  },
+  "sections": {
+    "highlights": "Highlights",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "languages": "Languages",
+    "contact": "Contact"
+  },
+  "contact": {
+    "text": "Open to Salesforce Administrator and Data Analyst opportunities. Let’s talk.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "projects": {
+    "heading": "Projects",
+    "intro": "Selected work, written as short case studies.",
+    "problem": "Problem",
+    "approach": "Approach",
+    "result": "Result",
+    "stack": "Stack"
+  },
+  "credentials": {
+    "heading": "Credentials",
+    "publications": "Publications",
+    "certifications": "Certifications",
+    "download": "Download PDF",
+    "referencesTitle": "References",
+    "referencesText": "Professional and academic references are available upon request."
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "text": "The page you are looking for does not exist.",
+    "errorHeading": "Something went wrong",
+    "errorText": "Please try again in a moment.",
+    "back": "Back to home"
+  }
+}

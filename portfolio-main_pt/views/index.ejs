@@ -1,227 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/head') %>
+<%- include('partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <!-- Include Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Add some animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Include jQuery for scroll effect -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Include GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <!-- Include ScrollMagic for scroll effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-</head>
-
-<body>
-  <header>
-    <h1>Lucas Palma</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Introdução</a></li>
-        <li><a href="/projects">Projetos</a></li>
-        <li><a href="/references">Referências</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="content">
-    <!-- Employment History Section -->
-    <div class="employment-history">
-      <h3>Experiência Profissional</h3>
-      <div class="employment-cards">
-        <div class="experience-card card">
-        <div class="experience-header">
-            <a href="https://www.jakesfireworks.com/" target="_blank">
-              <img src="/images/jakes-logo-2x.png" alt="Jake’s Fireworks Logo" class="institution-logo">
-            </a>
-            <p><strong>Administrador Salesforce</strong><br>Jake’s Fireworks<br>01/2025 a 08/2025</p>
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <p class="eyebrow"><%= t('hero.eyebrow') %></p>
+            <h1><%= t('hero.headline') %></h1>
+            <p class="hero-summary"><%= t('hero.summary') %></p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="/projects"><%= t('hero.projects') %></a>
+                <% if (hasResume) { %><a class="btn" href="/downloads/resume.pdf" download><%= t('hero.resume') %></a><% } %>
+                <% if (contactEmail) { %><a class="btn" href="mailto:<%= contactEmail %>"><%= t('hero.email') %></a><% } %>
+                <a class="btn" href="<%= site.linkedin %>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn" href="<%= site.github %>" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
         </div>
-        <ul>
-            <li>Gerenciei todo o org Salesforce garantindo a integridade e conformidade dos dados.</li>
-            <li>Implementei e configurei o Salesforce Maps.</li>
-            <li>Configurei e automatizei Campanhas no Salesforce para facilitar a comunicação entre o time e seus clientes.</li>
+        <img class="hero-photo" src="/images/Profile_Pic.webp" alt="<%= t('hero.photoAlt') %>" width="220" height="220">
+    </div>
+</section>
+
+<div class="container">
+    <section class="section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title" class="visually-hidden"><%= t('sections.highlights') %></h2>
+        <ul class="stats">
+            <% highlights.forEach(function (h) { %>
+            <li class="stat reveal">
+                <span class="stat-value"><%= h.value %></span>
+                <span class="stat-label"><%= loc(h.label) %></span>
+            </li>
+            <% }) %>
         </ul>
+    </section>
+
+    <section class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title"><%= t('sections.experience') %></h2>
+        <div class="grid grid-3">
+            <% experience.forEach(function (job) { %>
+            <article class="card reveal">
+                <header class="card-head">
+                    <a href="<%= job.url %>" target="_blank" rel="noopener noreferrer">
+                        <img class="logo" src="<%= job.logo %>" alt="<%= job.org %>" width="48" height="48" loading="lazy">
+                    </a>
+                    <div>
+                        <h3><%= loc(job.role) %></h3>
+                        <p class="muted"><%= job.org %> · <%= job.period %></p>
+                    </div>
+                </header>
+                <ul class="bullets">
+                    <% loc(job.bullets).forEach(function (b) { %><li><%= b %></li><% }) %>
+                </ul>
+            </article>
+            <% }) %>
         </div>
-        
-        <div class="experience-card card">
-          <div class="experience-header">
-            <a href="https://www.pittstate.edu/index.html" target="_blank">
-              <img src="/images/pittstate.png" alt="Pittsburg State University Logo" class="institution-logo">
-            </a>
-            <p><strong>Assistente de Professor</strong><br>Pittsburg State University<br>10/2023 a 05/2024</p>
-          </div>
-          <ul>
-            <li>Forneci suporte técnico em Excel e treinamento em Tabelas Dinâmicas</li>
-            <li>Desenvolvi uma análise de banco de dados para engajamento da comunicação estudantil</li>
-          </ul>
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title"><%= t('sections.skills') %></h2>
+        <div class="grid grid-2">
+            <% skills.forEach(function (group) { %>
+            <article class="card reveal">
+                <h3><%= loc(group.title) %></h3>
+                <ul class="tags">
+                    <% group.items.forEach(function (item) { %><li class="tag"><%= item %></li><% }) %>
+                </ul>
+            </article>
+            <% }) %>
         </div>
-        
-        <div class="experience-card card">
-          <div class="experience-header">
-            <a href="https://www.braskem.com.br/usa" target="_blank">
-              <img src="/images/braskem.png" alt="Braskem Logo" class="institution-logo">
-            </a>
-            <p><strong>Estagiário em Análise de Dados</strong><br>Braskem S.A.<br>11/2020 a 12/2021</p>
-          </div>
-          <ul>
-            <li>Realizei semanalmente limpeza, consultas e otimização de banco de dados</li>
-            <li>Criei dashboards visuais usando Power BI</li>
-            <li>Desenvolvi um algoritmo em VBA para envio eficiente de e-mails de auditoria</li>
-          </ul>
+    </section>
+
+    <section class="section" aria-labelledby="education-title">
+        <h2 id="education-title"><%= t('sections.education') %></h2>
+        <div class="grid grid-2">
+            <% education.forEach(function (ed) { %>
+            <article class="card reveal">
+                <header class="card-head">
+                    <a href="<%= ed.url %>" target="_blank" rel="noopener noreferrer">
+                        <img class="logo" src="<%= ed.logo %>" alt="<%= ed.school %>" width="48" height="48" loading="lazy">
+                    </a>
+                    <div>
+                        <h3><%= ed.school %></h3>
+                        <p class="muted"><%= ed.date %> · <%= ed.place %></p>
+                    </div>
+                </header>
+                <p><strong><%= loc(ed.degree) %></strong></p>
+            </article>
+            <% }) %>
         </div>
+    </section>
 
-        <div class="experience-card card">
-          <div class="experience-header">
-            <a href="https://www.raizen.com.br/en" target="_blank">
-              <img src="/images/raizen.png" alt="Raizen Logo" class="institution-logo">
-            </a>
-            <p><strong>Estagiário em Análise de Vendas</strong><br>Raízen S.A.<br>08/2019 a 02/2020</p>
-          </div>
-          <ul>
-            <li>Manipulei relatórios no Salesforce e realizei análises com Tabelas Dinâmicas</li>
-            <li>Forneci relatórios completos para suporte à tomada de decisão estratégica</li>
-          </ul>
+    <section class="section" aria-labelledby="languages-title">
+        <h2 id="languages-title"><%= t('sections.languages') %></h2>
+        <ul class="languages">
+            <% languages.forEach(function (l) { %>
+            <li class="card lang-card reveal">
+                <img class="flag" src="<%= l.flag %>" alt="<%= loc(l.alt) %>" width="48" height="32" loading="lazy">
+                <span><strong><%= loc(l.name) %></strong> — <%= loc(l.level) %></span>
+            </li>
+            <% }) %>
+        </ul>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title"><%= t('sections.contact') %></h2>
+        <p><%= t('contact.text') %></p>
+        <div class="cta-row">
+            <% if (contactEmail) { %><a class="btn btn-primary" href="mailto:<%= contactEmail %>"><%= t('hero.email') %></a><% } %>
+            <a class="btn <%= contactEmail ? '' : 'btn-primary' %>" href="<%= site.linkedin %>" target="_blank" rel="noopener noreferrer"><%= t('contact.linkedin') %></a>
+            <a class="btn" href="<%= site.github %>" target="_blank" rel="noopener noreferrer"><%= t('contact.github') %></a>
         </div>
-        
-      </div>
-    </div>
+    </section>
+</div>
 
-    <!-- Skills Section -->
-    <div class="skills-section">
-      <h3>Competências</h3>
-      <div class="skills-cards">
-
-        <div class="skills-card card">
-          <h4>Análise e Visualização de Dados</h4>
-          <ul>
-            <li>SOQL, SQL</li>
-            <li>DAX</li>
-            <li>MS Excel</li>
-            <li>R, RStudio</li>
-            <li>MongoDB</li>
-            <li>Machine Learning</li>
-            <li>pandas, matplotlib, NumPy, scikit-learn</li>
-          </ul>
-        </div>
-
-        <div class="skills-card card">
-          <h4>Linguagens de Programação</h4>
-          <ul>
-            <li>Apex</li>
-            <li>Python</li>
-            <li>Visual Basic</li>
-            <li>Java</li>
-            <li>Dart</li>
-            <li>Google Apps Script</li>
-            <li>HTML, CSS, JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="skills-card card">
-          <h4>Ferramentas de CRM e Negócios</h4>
-          <ul>
-            <li>Salesforce</li>
-            <li>Power BI</li>
-            <li>Google Apps Script</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Education Section -->
-    <div class="education-section">
-      <h3>Formação Acadêmica</h3>
-      <div class="education-cards">
-
-        <div class="education-box card">
-          <a href="https://www.pittstate.edu/index.html" target="_blank">
-            <img src="/images/pittstate.png" alt="Pittsburg State University Logo" class="education-logo">
-          </a>
-          <p>Pittsburg State University</p>
-          <p><strong>Mestrado em Ciência e Tecnologia<br> Ênfase em Tecnologia da Informação</strong><br>05/2024<br>Pittsburg, Kansas, Estados Unidos</p>
-        </div>
-
-        <div class="education-box card">
-          <a href="https://www.unifacs.br/" target="_blank">
-            <img src="/images/unifacs.jpg" alt="Universidade Salvador Logo" class="education-logo">
-          </a>
-          <p>Universidade Salvador</p>
-          <p><strong>Bacharelado em Administração de Empresas</strong><br>12/2021<br>Salvador, Bahia, Brasil</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Languages Section -->
-    <div class="languages-section">
-      <h3>Idiomas</h3>
-      <div class="languages-cards">
-        <div class="languages-box card">
-          <img src="/images/unitedStates.png" alt="Bandeira EUA" class="flag">
-          <p>Inglês</p>
-          <p><strong>Fluente</strong></p>
-        </div>
-        <div class="languages-box card">
-          <img src="/images/brazil.png" alt="Bandeira Brasil" class="flag">
-          <p>Português</p>
-          <p><strong>Nativo</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </main>
-  <footer>
-    <div class="social-media">
-      <a href="https://linkedin.com/in/lpalma1999" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/palmaz9" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </footer>
-
-  <script>
-    // Remove preventDefault for navigation links
-    $(document).ready(function () {
-      $('nav ul li a').on('click', function (event) {
-        if ($(this).attr('href').startsWith('#')) {
-          event.preventDefault(); // Only prevent default for anchor links within the page
-          $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-          }, 1000);
-        }
-      });
-    });
-
-    // GSAP animations for cards
-    gsap.from(".employment-history", { duration: 1, y: 50, opacity: 0, delay: 0.5 });
-    gsap.from(".skills-section", { duration: 1, y: 50, opacity: 0, delay: 1 });
-    gsap.from(".education-section", { duration: 1, y: 50, opacity: 0, delay: 1.5 });
-    gsap.from(".languages-section", { duration: 1, y: 50, opacity: 0, delay: 2 });
-
-    // ScrollMagic to trigger animations on scroll
-    var controller = new ScrollMagic.Controller();
-
-    // Select all cards
-    var cards = document.querySelectorAll('.card');
-
-    // Add animation to each card
-    cards.forEach(function (card, index) {
-      var scene = new ScrollMagic.Scene({
-        triggerElement: card,
-        triggerHook: 0.8,
-        reverse: false
-      })
-        .setClassToggle(card, 'visible')
-        .addTo(controller);
-    });
-  </script>
-</body>
-</html>
+<%- include('partials/footer') %>

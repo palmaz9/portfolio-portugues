@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <% if (pageDescription) { %>
+    <meta name="description" content="<%= pageDescription %>">
+    <meta property="og:description" content="<%= pageDescription %>">
+    <% } %>
+    <meta property="og:title" content="<%= pageTitle %>">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="<%= lang === 'pt' ? 'pt_BR' : 'en_US' %>">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0b1220">
+    <% if (canonical) { %>
+    <link rel="canonical" href="<%= canonical %>">
+    <link rel="alternate" hreflang="en" href="<%= canonical %>?lang=en">
+    <link rel="alternate" hreflang="pt" href="<%= canonical %>?lang=pt">
+    <meta property="og:url" content="<%= canonical %>">
+    <% } %>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main"><%= t('nav.skip') %></a>

@@ -1,0 +1,39 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<div class="container">
+    <section class="section">
+        <h1 class="page-title"><%= t('credentials.heading') %></h1>
+
+        <h2><%= t('credentials.publications') %></h2>
+        <div class="grid grid-2">
+            <% publications.forEach(function (pub) { %>
+            <article class="card reveal">
+                <h3><%= loc(pub.title) %></h3>
+                <p><%= loc(pub.description) %></p>
+                <a class="btn" href="<%= pub.href %>" download="<%= pub.download %>"><%= t('credentials.download') %></a>
+            </article>
+            <% }) %>
+        </div>
+
+        <% if (certifications.length) { %>
+        <h2><%= t('credentials.certifications') %></h2>
+        <div class="grid grid-2">
+            <% certifications.forEach(function (c) { %>
+            <article class="card reveal">
+                <h3><%= loc(c.name) %></h3>
+                <p class="muted"><%= c.issuer %> · <%= c.year %></p>
+                <% if (c.url) { %><a class="btn" href="<%= c.url %>" target="_blank" rel="noopener noreferrer">Verify</a><% } %>
+            </article>
+            <% }) %>
+        </div>
+        <% } %>
+
+        <h2><%= t('credentials.referencesTitle') %></h2>
+        <article class="card reveal">
+            <p><%= t('credentials.referencesText') %></p>
+        </article>
+    </section>
+</div>
+
+<%- include('partials/footer') %>

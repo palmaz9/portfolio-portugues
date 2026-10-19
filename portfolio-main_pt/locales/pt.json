@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "homeTitle": "Lucas Palma | Administrador Salesforce e Analista de Dados",
+    "homeDescription": "Portfólio de Lucas Palma: relatórios Salesforce, SQL, dashboards em Power BI e automação de processos. Mestre em Tecnologia da Informação.",
+    "projectsTitle": "Projetos | Lucas Palma",
+    "projectsDescription": "Estudos de caso em automação, dashboards em Power BI, uma aplicação Node.js com MongoDB e aprendizado de máquina.",
+    "credentialsTitle": "Credenciais | Lucas Palma",
+    "credentialsDescription": "Publicações, certificações e referências de Lucas Palma.",
+    "notFoundTitle": "Página não encontrada | Lucas Palma",
+    "errorTitle": "Algo deu errado | Lucas Palma"
+  },
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "credentials": "Credenciais",
+    "label": "Navegação principal",
+    "skip": "Ir para o conteúdo",
+    "language": "Idioma",
+    "theme": "Alternar tema claro/escuro"
+  },
+  "hero": {
+    "eyebrow": "Administrador Salesforce e Analista de Dados",
+    "headline": "Transformo dados de negócio em decisões.",
+    "summary": "Relatórios Salesforce, SQL, dashboards em Power BI e automação de processos, com mestrado em Tecnologia da Informação.",
+    "projects": "Ver projetos",
+    "resume": "Baixar currículo",
+    "email": "Enviar e-mail",
+    "photoAlt": "Foto de Lucas Palma"
+  },
+  "sections": {
+    "highlights": "Destaques",
+    "experience": "Experiência",
+    "skills": "Competências",
+    "education": "Formação",
+    "languages": "Idiomas",
+    "contact": "Contato"
+  },
+  "contact": {
+    "text": "Aberto a oportunidades como Administrador Salesforce e Analista de Dados. Vamos conversar.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "projects": {
+    "heading": "Projetos",
+    "intro": "Trabalhos selecionados, apresentados como estudos de caso curtos.",
+    "problem": "Problema",
+    "approach": "Abordagem",
+    "result": "Resultado",
+    "stack": "Tecnologias"
+  },
+  "credentials": {
+    "heading": "Credenciais",
+    "publications": "Publicações",
+    "certifications": "Certificações",
+    "download": "Baixar PDF",
+    "referencesTitle": "Referências",
+    "referencesText": "Referências profissionais e acadêmicas disponíveis mediante solicitação."
+  },
+  "notFound": {
+    "heading": "Página não encontrada",
+    "text": "A página que você procura não existe.",
+    "errorHeading": "Algo deu errado",
+    "errorText": "Tente novamente em instantes.",
+    "back": "Voltar ao início"
+  }
+}
