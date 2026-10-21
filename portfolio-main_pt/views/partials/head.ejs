@@ -20,8 +20,8 @@
     <meta property="og:url" content="<%= canonical %>">
     <% } %>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="<%= asset('/css/styles.css') %>">
+    <script src="<%= asset('/js/main.js') %>" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main"><%= t('nav.skip') %></a>

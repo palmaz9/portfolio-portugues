@@ -3,6 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
 
 const { i18n } = require('./i18n');
 const content = require('../data/content');
@@ -28,7 +29,17 @@ app.use(helmet({
     },
 }));
 
-// Static assets: long cache for fingerprint-free files is risky, so use a short one.
+// CSS/JS URLs carry a content hash (?v=...), so a changed file is never served stale.
+function assetVersion(file) {
+    try {
+        return crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, 'public', file))).digest('hex').slice(0, 8);
+    } catch {
+        return '0';
+    }
+}
+const versions = { '/css/styles.css': assetVersion('css/styles.css'), '/js/main.js': assetVersion('js/main.js') };
+app.locals.asset = (file) => (versions[file] ? `${file}?v=${versions[file]}` : file);
+
 app.use(express.static(path.join(ROOT, 'public'), { maxAge: '1d' }));
 
 app.use(i18n);

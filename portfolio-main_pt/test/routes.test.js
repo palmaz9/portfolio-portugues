@@ -98,3 +98,9 @@ test('skills follow the CV and the Agrio logo is shown', async () => {
     assert.doesNotMatch(res.text, /Google Apps Script|scikit-learn|MongoDB/);
     assert.match(res.text, /agrio-logo\.webp/);
 });
+
+test('CSS and JS URLs are versioned so changes are never served stale', async () => {
+    const res = await request(app).get('/');
+    assert.match(res.text, /styles\.css\?v=[0-9a-f]{8}/);
+    assert.match(res.text, /main\.js\?v=[0-9a-f]{8}/);
+});
