@@ -90,3 +90,11 @@ test('hero mentions the developer role in both languages', async () => {
     const pt = await request(app).get('/?lang=pt');
     assert.match(pt.text, /Analista de Dados e Desenvolvedor/);
 });
+
+test('skills follow the CV and the Agrio logo is shown', async () => {
+    const res = await request(app).get('/?lang=en');
+    assert.match(res.text, /Flow Builder/);
+    assert.match(res.text, /LLM APIs \(Claude\)/);
+    assert.doesNotMatch(res.text, /Google Apps Script|scikit-learn|MongoDB/);
+    assert.match(res.text, /agrio-logo\.webp/);
+});

@@ -18,6 +18,8 @@ const highlights = [
 const experience = [
     {
         org: 'Agrio Frutas',
+        logo: '/images/agrio-logo.webp',
+        logoWide: true,
         role: { en: 'Data Analyst & Systems Developer', pt: 'Analista de Dados e Desenvolvedor de Sistemas' },
         period: { en: '06/2026 – Present', pt: '06/2026 – Atual' },
         bullets: {
@@ -136,26 +138,23 @@ const experience = [
     },
 ];
 
+// Skills mirror the CV (LPalma_CV.pdf).
 const skills = [
     {
         title: { en: 'Salesforce & CRM', pt: 'Salesforce e CRM' },
-        items: ['Salesforce', 'Flow Builder', 'Data Loader', 'Salesforce Maps', 'Campaigns', 'Salesforce Reports', 'Apex', 'SOQL', 'Pivot Tables'],
+        items: ['Salesforce', 'Flow Builder', 'Data Loader'],
     },
     {
         title: { en: 'Data Analysis & BI', pt: 'Análise de Dados e BI' },
-        items: ['SQL', 'DAX', 'Power BI', 'MS Excel', 'R / RStudio', 'MongoDB'],
+        items: ['SQL', 'Power BI', 'MS Excel', 'R'],
     },
     {
-        title: { en: 'Programming & Automation', pt: 'Programação e Automação' },
-        items: ['Python', 'VBA', 'Google Apps Script', 'JavaScript', 'HTML / CSS', 'Java', 'Dart'],
+        title: { en: 'Web Development', pt: 'Desenvolvimento Web' },
+        items: ['TypeScript', 'Next.js / React', 'PostgreSQL / Supabase', 'HTML', 'CSS', 'JavaScript'],
     },
     {
-        title: { en: 'Web Development & Integrations', pt: 'Desenvolvimento Web e Integrações' },
-        items: ['TypeScript', 'Next.js / React', 'PostgreSQL / Supabase', 'REST APIs', 'OAuth 2.0', 'ERP integration (Bling, Sage X3)', 'Apache NiFi', 'Claude API', 'Git / Vercel'],
-    },
-    {
-        title: { en: 'Machine Learning', pt: 'Aprendizado de Máquina' },
-        items: ['TensorFlow', 'Keras', 'scikit-learn', 'pandas', 'NumPy', 'matplotlib'],
+        title: { en: 'Integrations, AI & Tools', pt: 'Integrações, IA e Ferramentas' },
+        items: ['ERP integration (Bling)', 'LLM APIs (Claude)', 'REST APIs', 'OAuth 2.0', 'Git / Vercel'],
     },
 ];
 
