@@ -66,3 +66,14 @@ test('security headers are set and x-powered-by is hidden', async () => {
     assert.ok(res.headers['content-security-policy']);
     assert.equal(res.headers['x-powered-by'], undefined);
 });
+
+test('home lists the Agrio Frutas role in both languages', async () => {
+    const en = await request(app).get('/?lang=en');
+    assert.match(en.text, /Agrio Frutas/);
+    assert.match(en.text, /Data Analyst &amp; Systems Developer/);
+    assert.match(en.text, /06\/2026 – Present/);
+
+    const pt = await request(app).get('/?lang=pt');
+    assert.match(pt.text, /Analista de Dados e Desenvolvedor de Sistemas/);
+    assert.match(pt.text, /06\/2026 – Atual/);
+});

@@ -17,6 +17,27 @@ const highlights = [
 
 const experience = [
     {
+        org: 'Agrio Frutas',
+        role: { en: 'Data Analyst & Systems Developer', pt: 'Analista de Dados e Desenvolvedor de Sistemas' },
+        period: { en: '06/2026 – Present', pt: '06/2026 – Atual' },
+        bullets: {
+            en: [
+                'Built, end to end, a web system to manage purchasing, inventory, finance and fleet (Next.js, TypeScript, Supabase/PostgreSQL, Vercel)',
+                'Integrated the Bling ERP through its REST API v3 (OAuth 2.0), syncing sales, purchases and inventory with duplicate control and reconciliation against ERP reports',
+                'Created financial and operational dashboards: revenue, cost, gross profit, targets, average price per product and fleet cost per km',
+                'Added automatic reading of receipts and odometer photos with vision AI (Claude API), reducing manual data entry',
+                'Structured profile-based access control with row-level security (RLS) and automations for order submission and inventory posting',
+            ],
+            pt: [
+                'Desenvolvi, de ponta a ponta, um sistema web de gestão de compras, estoque, financeiro e frota (Next.js, TypeScript, Supabase/PostgreSQL, Vercel)',
+                'Integrei o ERP Bling via API REST v3 (OAuth 2.0), sincronizando vendas, compras e estoque com controle de duplicidades e reconciliação com os relatórios do ERP',
+                'Criei dashboards financeiros e operacionais: faturamento, custo, lucro bruto, meta, preço médio por produto e custo por km da frota',
+                'Implementei leitura automática de recibos e fotos de hodômetro com IA de visão (API da Claude), reduzindo a digitação manual',
+                'Estruturei controle de acesso por perfis com segurança em nível de linha (RLS) e automações de envio de pedidos e lançamento de estoque',
+            ],
+        },
+    },
+    {
         org: 'Jake’s Fireworks',
         url: 'https://www.jakesfireworks.com/',
         logo: '/images/jakes-logo-2x.webp',
@@ -102,6 +123,10 @@ const skills = [
     {
         title: { en: 'Programming & Automation', pt: 'Programação e Automação' },
         items: ['Python', 'VBA', 'Google Apps Script', 'JavaScript', 'HTML / CSS', 'Java', 'Dart'],
+    },
+    {
+        title: { en: 'Web Development & Integrations', pt: 'Desenvolvimento Web e Integrações' },
+        items: ['TypeScript', 'Next.js / React', 'PostgreSQL / Supabase', 'REST APIs', 'OAuth 2.0', 'ERP integration (Bling)', 'Claude API', 'Git / Vercel'],
     },
     {
         title: { en: 'Machine Learning', pt: 'Aprendizado de Máquina' },

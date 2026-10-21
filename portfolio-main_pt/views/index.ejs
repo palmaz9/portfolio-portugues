@@ -38,12 +38,16 @@
             <% experience.forEach(function (job) { %>
             <article class="card reveal">
                 <header class="card-head">
+                    <% if (job.logo) { %>
                     <a href="<%= job.url %>" target="_blank" rel="noopener noreferrer">
                         <img class="logo" src="<%= job.logo %>" alt="<%= job.org %>" width="48" height="48" loading="lazy">
                     </a>
+                    <% } else { %>
+                    <span class="logo logo-fallback" aria-hidden="true"><%= job.org.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2) %></span>
+                    <% } %>
                     <div>
                         <h3><%= loc(job.role) %></h3>
-                        <p class="muted"><%= job.org %> · <%= job.period %></p>
+                        <p class="muted"><%= job.org %> · <%= loc(job.period) %></p>
                     </div>
                 </header>
                 <ul class="bullets">

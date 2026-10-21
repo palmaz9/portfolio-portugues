@@ -179,6 +179,12 @@ p { margin: 0 0 1em; }
 .card-head h3 { margin: 0; }
 .logo { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; padding: 2px; }
 
+.logo-fallback {
+    display: inline-grid; place-items: center; flex: none;
+    background: var(--accent-soft); color: var(--accent);
+    font-family: var(--font-mono); font-weight: 700;
+}
+
 .bullets { margin: 0; padding-left: 1.2rem; }
 .bullets li { margin-bottom: 6px; }
 
