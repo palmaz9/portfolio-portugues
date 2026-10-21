@@ -179,7 +179,6 @@ p { margin: 0 0 1em; }
 .card-head h3 { margin: 0; }
 .logo { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; padding: 2px; }
 
-.logo-wide { width: 124px; flex: none; padding: 2px 4px; }
 
 .logo-fallback {
     display: inline-grid; place-items: center; flex: none;

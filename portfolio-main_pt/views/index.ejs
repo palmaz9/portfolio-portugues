@@ -39,7 +39,7 @@
             <article class="card reveal">
                 <header class="card-head">
                     <% if (job.logo) { %>
-                    <% var logoImg = '<img class="logo' + (job.logoWide ? ' logo-wide' : '') + '" src="' + job.logo + '" alt="' + job.org + '" width="' + (job.logoWide ? 124 : 48) + '" height="48" loading="lazy">'; %>
+                    <% var logoImg = '<img class="logo" src="' + job.logo + '" alt="' + job.org + '" width="48" height="48" loading="lazy">'; %>
                     <% if (job.url) { %>
                     <a href="<%= job.url %>" target="_blank" rel="noopener noreferrer"><%- logoImg %></a>
                     <% } else { %>

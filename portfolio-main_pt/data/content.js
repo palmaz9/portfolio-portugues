@@ -19,7 +19,6 @@ const experience = [
     {
         org: 'Agrio Frutas',
         logo: '/images/agrio-logo.webp',
-        logoWide: true,
         role: { en: 'Data Analyst & Systems Developer', pt: 'Analista de Dados e Desenvolvedor de Sistemas' },
         period: { en: '06/2026 – Present', pt: '06/2026 – Atual' },
         bullets: {
