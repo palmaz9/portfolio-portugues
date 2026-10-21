@@ -1,7 +1,7 @@
 {
   "meta": {
-    "homeTitle": "Lucas Palma | Administrador Salesforce e Analista de Dados",
-    "homeDescription": "Portfólio de Lucas Palma: relatórios Salesforce, SQL, dashboards em Power BI e automação de processos. Mestre em Tecnologia da Informação.",
+    "homeTitle": "Lucas Palma | Administrador Salesforce, Analista de Dados e Desenvolvedor",
+    "homeDescription": "Portfólio de Lucas Palma: administração Salesforce, SQL, Power BI e aplicações web integradas a ERPs e IA. Mestre em Tecnologia da Informação.",
     "projectsTitle": "Projetos | Lucas Palma",
     "projectsDescription": "Estudos de caso em automação, dashboards em Power BI, uma aplicação Node.js com MongoDB e aprendizado de máquina.",
     "credentialsTitle": "Credenciais | Lucas Palma",
@@ -19,9 +19,9 @@
     "theme": "Alternar tema claro/escuro"
   },
   "hero": {
-    "eyebrow": "Administrador Salesforce e Analista de Dados",
+    "eyebrow": "Administrador Salesforce, Analista de Dados e Desenvolvedor",
     "headline": "Transformo dados de negócio em decisões.",
-    "summary": "Relatórios Salesforce, SQL, dashboards em Power BI e automação de processos, com mestrado em Tecnologia da Informação.",
+    "summary": "Especialista em Salesforce e dados, com experiência em cargas, migrações e governança de dados, e em desenvolvimento de aplicações web integradas a ERPs e a IA. Foco em qualidade, integridade e segurança dos dados.",
     "projects": "Ver projetos",
     "resume": "Baixar currículo",
     "email": "Enviar e-mail",

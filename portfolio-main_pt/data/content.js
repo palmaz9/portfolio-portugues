@@ -12,7 +12,7 @@ const highlights = [
     { value: '4–5 h → 10 s', label: { en: 'Email auditing process automated with VBA', pt: 'Processo de e-mails de auditoria automatizado com VBA' } },
     { value: '100%', label: { en: 'Accuracy on the automated audit cycles', pt: 'de precisão nos ciclos de auditoria automatizados' } },
     { value: 'M.S. IT', label: { en: 'Pittsburg State University, 2024', pt: 'Pittsburg State University, 2024' } },
-    { value: 'Salesforce Admin', label: { en: 'Org management, Maps and Campaigns at Jake’s Fireworks, 2025', pt: 'Gestão do org, Maps e Campanhas na Jake’s Fireworks, 2025' } },
+    { value: 'Salesforce Admin', label: { en: 'Flow automations, Data Loader and integrations at Jake’s Fireworks, 2024–25', pt: 'Automações com Flow, Data Loader e integrações na Jake’s Fireworks, 2024–25' } },
 ];
 
 const experience = [
@@ -42,17 +42,25 @@ const experience = [
         url: 'https://www.jakesfireworks.com/',
         logo: '/images/jakes-logo-2x.webp',
         role: { en: 'Salesforce Administrator', pt: 'Administrador Salesforce' },
-        period: '01/2025 – 08/2025',
+        period: '06/2024 – 08/2025',
         bullets: {
             en: [
-                'Managed the entire Salesforce org, ensuring data integrity and compliance',
-                'Implemented and configured Salesforce Maps',
-                'Set up and automated Salesforce Campaigns to streamline communication between the team and its customers',
+                'Administered Salesforce environments with a focus on security, permissioning and data integrity',
+                'Built automations with Salesforce Flow Builder to streamline internal processes',
+                'Configured custom objects, reports, dashboards and validations on the platform',
+                'Took part in integrations between Salesforce and external systems using Apache NiFi and the Sage X3 ERP',
+                'Produced technical and functional documentation for processes and platform configuration',
+                'Worked in an agile environment (Scrum/Kanban) and gave functional support to internal users',
+                'Used Salesforce Data Loader for bulk imports, exports and updates, keeping CRM data accurate and consistent',
             ],
             pt: [
-                'Gerenciei todo o org Salesforce, garantindo a integridade e a conformidade dos dados',
-                'Implementei e configurei o Salesforce Maps',
-                'Configurei e automatizei Campanhas no Salesforce para facilitar a comunicação entre o time e seus clientes',
+                'Administrei ambientes Salesforce com foco em segurança, permissionamento e integridade de dados',
+                'Desenvolvi automações utilizando Salesforce Flow Builder para otimização de processos internos',
+                'Configurei objetos customizados, relatórios, dashboards e validações na plataforma Salesforce',
+                'Participei de integrações entre Salesforce e sistemas externos utilizando Apache NiFi e ERP Sage X3',
+                'Produzi documentação técnica e funcional para processos e configurações da plataforma',
+                'Atuei em ambiente ágil utilizando práticas Scrum/Kanban e suporte funcional aos usuários internos',
+                'Utilizei o Salesforce Data Loader para realizar importações, exportações e atualizações em massa de registros, garantindo a qualidade e a integridade dos dados no CRM',
             ],
         },
     },
@@ -65,11 +73,11 @@ const experience = [
         bullets: {
             en: [
                 'Provided Excel technical support and Pivot Table training',
-                'Built a database analysis of student communication engagement',
+                'Built a data analysis comparing student communication engagement with the university’s internal system',
             ],
             pt: [
-                'Prestei suporte técnico em Excel e treinamento em Tabelas Dinâmicas',
-                'Desenvolvi uma análise de banco de dados sobre o engajamento na comunicação com estudantes',
+                'Forneci suporte técnico em Excel e treinamento em Tabelas Dinâmicas',
+                'Desenvolvi uma análise de dados comparando o engajamento de comunicação dos estudantes com o sistema interno da universidade',
             ],
         },
     },
@@ -77,35 +85,52 @@ const experience = [
         org: 'Braskem S.A.',
         url: 'https://www.braskem.com.br/usa',
         logo: '/images/braskem.webp',
-        role: { en: 'Data Analyst Intern', pt: 'Estagiário em Análise de Dados' },
+        role: { en: 'Data Analyst Intern', pt: 'Estagiário – Analista de Dados' },
         period: '11/2020 – 12/2021',
         bullets: {
             en: [
-                'Automated auditing emails with VBA, cutting a 4–5 hour manual process to about 10 seconds',
-                'Built Power BI dashboards that tracked legal-operations KPIs for the Legal Efficiency team',
-                'Ran weekly database cleaning, querying and optimization tasks',
+                'Ran weekly data cleaning, querying and optimization tasks',
+                'Built Power BI dashboards to visualize the key KPIs of the Legal Efficiency area',
+                'Developed VBA algorithms behind an email-sending panel for Braskem’s external audit process, following compliance standards and cutting a 4–5 hour manual task to about 10 seconds',
             ],
             pt: [
-                'Automatizei e-mails de auditoria com VBA, reduzindo um processo manual de 4 a 5 horas para cerca de 10 segundos',
-                'Criei dashboards em Power BI que acompanhavam KPIs de operações jurídicas para a equipe de Eficiência Jurídica',
-                'Executei semanalmente tarefas de limpeza, consulta e otimização de bancos de dados',
+                'Executei semanalmente tarefas de limpeza de dados, querying e otimização',
+                'Criei dashboards em Power BI para visualizar os KPIs chave da área de Eficiência Jurídica',
+                'Desenvolvi algoritmos em VBA para um painel de envio de e-mails do processo de auditoria externa da Braskem, seguindo os padrões de compliance e reduzindo uma tarefa manual de 4 a 5 horas para cerca de 10 segundos',
             ],
         },
     },
     {
-        org: 'Raizen S.A.',
+        org: 'Raízen Combustíveis S.A.',
         url: 'https://www.raizen.com.br/en',
         logo: '/images/raizen.png',
-        role: { en: 'Sales Analyst Intern', pt: 'Estagiário em Análise de Vendas' },
+        role: { en: 'Retail Intern', pt: 'Estagiário de Varejo' },
         period: '08/2019 – 02/2020',
         bullets: {
             en: [
-                'Worked with Salesforce reports and analyzed the results with Pivot Tables',
-                'Delivered reports that supported strategic decision-making',
+                'Defined strategies, analyzed results and tracked performance indicators',
+                'Prepared weekly reports and organized events',
+                'Created PowerPoint presentations and spreadsheets',
             ],
             pt: [
-                'Trabalhei com relatórios do Salesforce e analisei os resultados com Tabelas Dinâmicas',
-                'Entreguei relatórios que apoiaram a tomada de decisões estratégicas',
+                'Defini estratégias, analisei resultados e acompanhei indicadores',
+                'Elaborei relatórios semanais e organizei eventos',
+                'Criei apresentações em PowerPoint e planilhas',
+            ],
+        },
+    },
+    {
+        org: 'Primus Consultoria Empresarial',
+        role: { en: 'HR / Administrative-Financial Director', pt: 'Diretor de Recursos Humanos/Administrativo Financeiro' },
+        period: '07/2018 – 12/2018',
+        bullets: {
+            en: [
+                'Prepared financial projections, cash-flow control and monthly balance sheets, and taught classes to trainees',
+                'Ran performance reviews, climate surveys, recruiting and selection, internal marketing and integration events with other junior enterprises',
+            ],
+            pt: [
+                'Elaborei projeções financeiras, controle de entradas e saídas e balanço mensal, e ministrei aulas aos trainees',
+                'Realizei avaliações de desempenho, pesquisa de clima, recrutamento e seleção, endomarketing e eventos de integração com outras Empresas Júniores',
             ],
         },
     },
@@ -114,7 +139,7 @@ const experience = [
 const skills = [
     {
         title: { en: 'Salesforce & CRM', pt: 'Salesforce e CRM' },
-        items: ['Salesforce', 'Salesforce Maps', 'Campaigns', 'Salesforce Reports', 'Apex', 'SOQL', 'Pivot Tables'],
+        items: ['Salesforce', 'Flow Builder', 'Data Loader', 'Salesforce Maps', 'Campaigns', 'Salesforce Reports', 'Apex', 'SOQL', 'Pivot Tables'],
     },
     {
         title: { en: 'Data Analysis & BI', pt: 'Análise de Dados e BI' },
@@ -126,7 +151,7 @@ const skills = [
     },
     {
         title: { en: 'Web Development & Integrations', pt: 'Desenvolvimento Web e Integrações' },
-        items: ['TypeScript', 'Next.js / React', 'PostgreSQL / Supabase', 'REST APIs', 'OAuth 2.0', 'ERP integration (Bling)', 'Claude API', 'Git / Vercel'],
+        items: ['TypeScript', 'Next.js / React', 'PostgreSQL / Supabase', 'REST APIs', 'OAuth 2.0', 'ERP integration (Bling, Sage X3)', 'Apache NiFi', 'Claude API', 'Git / Vercel'],
     },
     {
         title: { en: 'Machine Learning', pt: 'Aprendizado de Máquina' },
@@ -289,7 +314,10 @@ const publications = [
     },
 ];
 
-// Add { name, issuer, year, url } entries here; the section stays hidden while this is empty.
-const certifications = [];
+// Entries: { name, issuer, year?, url? }. The section stays hidden while this is empty.
+const certifications = [
+    { name: { en: 'Salesforce Associate Certified', pt: 'Salesforce Associate Certified' }, issuer: 'Salesforce' },
+    { name: { en: 'CITI Program Certified', pt: 'CITI Program Certified' }, issuer: 'CITI Program' },
+];
 
 module.exports = { site, highlights, experience, skills, education, languages, projects, publications, certifications };

@@ -22,7 +22,7 @@
             <% certifications.forEach(function (c) { %>
             <article class="card reveal">
                 <h3><%= loc(c.name) %></h3>
-                <p class="muted"><%= c.issuer %> · <%= c.year %></p>
+                <p class="muted"><%= c.issuer %><% if (c.year) { %> · <%= c.year %><% } %></p>
                 <% if (c.url) { %><a class="btn" href="<%= c.url %>" target="_blank" rel="noopener noreferrer">Verify</a><% } %>
             </article>
             <% }) %>

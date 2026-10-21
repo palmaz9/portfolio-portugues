@@ -1,7 +1,7 @@
 {
   "meta": {
-    "homeTitle": "Lucas Palma | Salesforce Administrator & Data Analyst",
-    "homeDescription": "Portfolio of Lucas Palma: Salesforce reporting, SQL, Power BI dashboards and process automation. M.S. in Information Technology.",
+    "homeTitle": "Lucas Palma | Salesforce Administrator, Data Analyst & Developer",
+    "homeDescription": "Portfolio of Lucas Palma: Salesforce administration, SQL, Power BI, and web applications integrated with ERPs and AI. M.S. in Information Technology.",
     "projectsTitle": "Projects | Lucas Palma",
     "projectsDescription": "Case studies in automation, Power BI dashboards, a Node.js and MongoDB app, and machine learning.",
     "credentialsTitle": "Credentials | Lucas Palma",
@@ -19,9 +19,9 @@
     "theme": "Toggle light/dark theme"
   },
   "hero": {
-    "eyebrow": "Salesforce Administrator & Data Analyst",
+    "eyebrow": "Salesforce Administrator, Data Analyst & Developer",
     "headline": "I turn business data into decisions.",
-    "summary": "Salesforce reporting, SQL, Power BI dashboards and process automation, backed by an M.S. in Information Technology.",
+    "summary": "Salesforce and data specialist experienced in data loads, migrations and governance, and in building web applications integrated with ERPs and AI. Focused on data quality, integrity and security.",
     "projects": "See my projects",
     "resume": "Download résumé",
     "email": "Email me",

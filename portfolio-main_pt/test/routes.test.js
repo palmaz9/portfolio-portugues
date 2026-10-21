@@ -77,3 +77,16 @@ test('home lists the Agrio Frutas role in both languages', async () => {
     assert.match(pt.text, /Analista de Dados e Desenvolvedor de Sistemas/);
     assert.match(pt.text, /06\/2026 – Atual/);
 });
+
+test('credentials page lists the certifications from the CV', async () => {
+    const res = await request(app).get('/certifications');
+    assert.match(res.text, /Salesforce Associate Certified/);
+    assert.match(res.text, /CITI Program Certified/);
+});
+
+test('hero mentions the developer role in both languages', async () => {
+    const en = await request(app).get('/?lang=en');
+    assert.match(en.text, /Salesforce Administrator, Data Analyst &amp; Developer/);
+    const pt = await request(app).get('/?lang=pt');
+    assert.match(pt.text, /Analista de Dados e Desenvolvedor/);
+});
