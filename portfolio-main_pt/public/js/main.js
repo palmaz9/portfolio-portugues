@@ -22,6 +22,28 @@
         });
     }
 
+    // Avatar: play / pause the audio introduction.
+    var avatar = document.querySelector('[data-avatar]');
+    if (avatar) {
+        var audio = avatar.querySelector('audio');
+        var toggle = avatar.querySelector('.avatar-btn');
+        var setPlaying = function (playing) {
+            avatar.classList.toggle('is-playing', playing);
+            toggle.setAttribute('aria-pressed', String(playing));
+            toggle.setAttribute('aria-label', playing ? toggle.dataset.labelPause : toggle.dataset.labelPlay);
+        };
+        toggle.addEventListener('click', function () {
+            if (audio.paused) {
+                audio.play().catch(function () { setPlaying(false); });
+            } else {
+                audio.pause();
+            }
+        });
+        audio.addEventListener('play', function () { setPlaying(true); });
+        audio.addEventListener('pause', function () { setPlaying(false); });
+        audio.addEventListener('ended', function () { setPlaying(false); });
+    }
+
     // Reveal-on-scroll. Without IntersectionObserver everything simply shows.
     var items = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) {
