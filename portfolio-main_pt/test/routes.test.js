@@ -122,3 +122,11 @@ test('intro audio files are served as audio', async () => {
         assert.match(res.headers['content-type'], /audio\/mpeg/);
     }
 });
+
+test('the home avatar is set to start its introduction 7 seconds after arrival', async () => {
+    const en = await request(app).get('/?lang=en');
+    assert.match(en.text, /data-autoplay-delay="7000"/);
+    assert.match(en.text, /data-hint-blocked="Press play to hear my introduction"/);
+    const pt = await request(app).get('/?lang=pt');
+    assert.match(pt.text, /data-hint-blocked="Toque no play para ouvir minha apresentação"/);
+});

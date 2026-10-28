@@ -69,6 +69,7 @@
     "hint": "Hear me introduce myself (35 s)",
     "transcript": "Read the transcript",
     "note": "Narrated with an AI voice created from my own voice (ElevenLabs).",
-    "script": "Hi! I'm Lucas Palma. I'm a Salesforce administrator and data analyst, with a Master's in Information Technology from Pittsburg State University. I work with Salesforce, SQL and Power BI, and today I also build web systems integrated with ERPs and artificial intelligence. At Agrio Frutas, I built an end-to-end system to manage purchasing, inventory, finance and fleet. My focus is always data quality, integrity and security. Feel free to explore my projects and get in touch. Thanks for visiting!"
+    "script": "Hi! I'm Lucas Palma. I'm a Salesforce administrator and data analyst, with a Master's in Information Technology from Pittsburg State University. I work with Salesforce, SQL and Power BI, and today I also build web systems integrated with ERPs and artificial intelligence. At Agrio Frutas, I built an end-to-end system to manage purchasing, inventory, finance and fleet. My focus is always data quality, integrity and security. Feel free to explore my projects and get in touch. Thanks for visiting!",
+    "hintBlocked": "Press play to hear my introduction"
   }
 }

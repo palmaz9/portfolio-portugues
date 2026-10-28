@@ -187,6 +187,8 @@ p { margin: 0 0 1em; }
 .avatar.is-playing .icon-pause { display: block; }
 .avatar.is-playing .avatar-ring { opacity: 1; animation: avatar-pulse 1.4s ease-out infinite; }
 .avatar-hint { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.avatar.needs-click .avatar-hint { color: var(--accent); font-weight: 600; }
+.avatar.needs-click .avatar-ring { opacity: 1; animation: avatar-pulse 1.4s ease-out infinite; }
 .avatar-transcript { font-size: 0.9rem; color: var(--muted); text-align: left; }
 .avatar-transcript summary { cursor: pointer; text-align: center; color: var(--accent); }
 .avatar-transcript p { margin: 8px 0 0; }

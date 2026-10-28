@@ -15,7 +15,7 @@
                 <a class="btn" href="<%= site.github %>" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
-        <div class="avatar" data-avatar>
+        <div class="avatar" data-avatar data-autoplay-delay="7000" data-hint-blocked="<%= t('avatar.hintBlocked') %>">
             <button type="button" class="avatar-btn" aria-pressed="false"
                     data-label-play="<%= t('avatar.play') %>" data-label-pause="<%= t('avatar.pause') %>"
                     aria-label="<%= t('avatar.play') %>">
@@ -27,7 +27,7 @@
                 </span>
             </button>
             <p class="avatar-hint"><%= t('avatar.hint') %></p>
-            <audio preload="none" src="<%= asset('/audio/intro-' + lang + '.mp3') %>"></audio>
+            <audio preload="auto" src="<%= asset('/audio/intro-' + lang + '.mp3') %>"></audio>
             <details class="avatar-transcript">
                 <summary><%= t('avatar.transcript') %></summary>
                 <p><%= t('avatar.script') %></p>

@@ -42,6 +42,45 @@
         audio.addEventListener('play', function () { setPlaying(true); });
         audio.addEventListener('pause', function () { setPlaying(false); });
         audio.addEventListener('ended', function () { setPlaying(false); });
+
+        // Start the introduction by itself a few seconds after the visitor arrives.
+        // Browsers may refuse sound before the visitor interacts with the page; in that
+        // case the avatar asks for a click instead of failing silently.
+        var hint = avatar.querySelector('.avatar-hint');
+        var originalHint = hint ? hint.textContent : '';
+        var delay = Number(avatar.dataset.autoplayDelay) || 0;
+        var usedControls = false;
+        var autoplayed = false;
+        try { autoplayed = sessionStorage.getItem('introAutoplayed') === '1'; } catch { /* storage unavailable */ }
+
+        toggle.addEventListener('click', function () { usedControls = true; });
+        audio.addEventListener('play', function () {
+            avatar.classList.remove('needs-click');
+            if (hint) hint.textContent = originalHint;
+        });
+
+        var tryAutoplay = function () {
+            // Skip if the visitor already used the play/pause button, or the intro already played in this visit.
+            if (autoplayed || usedControls || !audio.paused || audio.ended) return;
+            if (document.hidden) {
+                document.addEventListener('visibilitychange', function onVisible() {
+                    if (document.hidden) return;
+                    document.removeEventListener('visibilitychange', onVisible);
+                    tryAutoplay();
+                });
+                return;
+            }
+            var attempt = audio.play();
+            if (attempt && attempt.then) {
+                attempt.then(function () {
+                    try { sessionStorage.setItem('introAutoplayed', '1'); } catch { /* ignore */ }
+                }).catch(function () {
+                    avatar.classList.add('needs-click');
+                    if (hint && avatar.dataset.hintBlocked) hint.textContent = avatar.dataset.hintBlocked;
+                });
+            }
+        };
+        if (delay > 0) window.setTimeout(tryAutoplay, delay);
     }
 
     // Reveal-on-scroll. Without IntersectionObserver everything simply shows.
