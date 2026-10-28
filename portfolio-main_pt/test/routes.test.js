@@ -107,11 +107,11 @@ test('CSS and JS URLs are versioned so changes are never served stale', async ()
 
 test('home has the audio avatar with a language-specific intro and transcript', async () => {
     const en = await request(app).get('/?lang=en');
-    assert.match(en.text, /src="\/audio\/intro-en\.mp3"/);
+    assert.match(en.text, /src="\/audio\/intro-en\.mp3\?v=[0-9a-f]{8}"/);
     assert.match(en.text, /Listen to my introduction/);
     assert.match(en.text, /AI voice created from my own voice/);
     const pt = await request(app).get('/?lang=pt');
-    assert.match(pt.text, /src="\/audio\/intro-pt\.mp3"/);
+    assert.match(pt.text, /src="\/audio\/intro-pt\.mp3\?v=[0-9a-f]{8}"/);
     assert.match(pt.text, /Ouvir minha apresentação/);
 });
 

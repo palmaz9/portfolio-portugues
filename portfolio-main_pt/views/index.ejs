@@ -27,7 +27,7 @@
                 </span>
             </button>
             <p class="avatar-hint"><%= t('avatar.hint') %></p>
-            <audio preload="none" src="/audio/intro-<%= lang %>.mp3"></audio>
+            <audio preload="none" src="<%= asset('/audio/intro-' + lang + '.mp3') %>"></audio>
             <details class="avatar-transcript">
                 <summary><%= t('avatar.transcript') %></summary>
                 <p><%= t('avatar.script') %></p>

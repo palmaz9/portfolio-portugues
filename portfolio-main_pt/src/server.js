@@ -37,7 +37,10 @@ function assetVersion(file) {
         return '0';
     }
 }
-const versions = { '/css/styles.css': assetVersion('css/styles.css'), '/js/main.js': assetVersion('js/main.js') };
+const versions = {};
+['css/styles.css', 'js/main.js', 'audio/intro-en.mp3', 'audio/intro-pt.mp3'].forEach((file) => {
+    versions[`/${file}`] = assetVersion(file);
+});
 app.locals.asset = (file) => (versions[file] ? `${file}?v=${versions[file]}` : file);
 
 app.use(express.static(path.join(ROOT, 'public'), { maxAge: '1d' }));
