@@ -38,7 +38,7 @@ function assetVersion(file) {
     }
 }
 const versions = {};
-['css/styles.css', 'js/main.js', 'audio/intro-en.mp3', 'audio/intro-pt.mp3'].forEach((file) => {
+['css/styles.css', 'js/main.js', 'video/intro-en.mp4', 'video/intro-pt.mp4', 'video/intro-en.jpg', 'video/intro-pt.jpg'].forEach((file) => {
     versions[`/${file}`] = assetVersion(file);
 });
 app.locals.asset = (file) => (versions[file] ? `${file}?v=${versions[file]}` : file);

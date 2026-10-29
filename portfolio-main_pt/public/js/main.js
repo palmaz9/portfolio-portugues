@@ -22,10 +22,10 @@
         });
     }
 
-    // Avatar: play / pause the audio introduction.
+    // Avatar: play / pause the video introduction.
     var avatar = document.querySelector('[data-avatar]');
     if (avatar) {
-        var audio = avatar.querySelector('audio');
+        var audio = avatar.querySelector('video'); // the video carries the voice
         var toggle = avatar.querySelector('.avatar-btn');
         var setPlaying = function (playing) {
             avatar.classList.toggle('is-playing', playing);

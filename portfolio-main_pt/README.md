@@ -6,7 +6,7 @@ Built with Express and EJS, deployed on Vercel.
 ## Features
 - English and Portuguese with a header toggle (`?lang=`, cookie, then `Accept-Language`)
 - Light and dark themes (follows the system, with a manual toggle)
-- Audio avatar on the home page: a ~35 s self-introduction (EN/PT) in my own cloned ElevenLabs voice, with a transcript (`public/audio/`)
+- Animated avatar on the home page: a cartoon caricature with AI lip-sync video (EN/PT), narrating a ~35 s introduction in my own cloned ElevenLabs voice, starting by itself after 7 s (`public/video/`)
 - Content in `data/content.js` and UI strings in `locales/*.json`, so views contain no hard-coded copy
 - No third-party scripts or styles: strict Content-Security-Policy via `helmet`
 - Content stays visible without JavaScript; scroll animations respect `prefers-reduced-motion`

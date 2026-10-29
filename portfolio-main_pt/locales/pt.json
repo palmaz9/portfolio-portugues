@@ -68,8 +68,9 @@
     "pause": "Pausar apresentação",
     "hint": "Ouça eu me apresentar (35 s)",
     "transcript": "Ler a transcrição",
-    "note": "Narrado com uma voz de IA criada a partir da minha própria voz (ElevenLabs).",
+    "note": "Animado com IA a partir de uma ilustração minha, com uma voz criada a partir da minha própria voz (ElevenLabs).",
     "script": "Olá! Eu sou o Lucas Palma. Sou administrador Salesforce e analista de dados, com mestrado em Tecnologia da Informação pela Pittsburg State University. Trabalho com Salesforce, SQL e Power BI e, hoje, também desenvolvo sistemas web integrados a ERPs e inteligência artificial. Na Agrio Frutas, construí de ponta a ponta um sistema de gestão de compras, estoque, financeiro e frota. Meu foco é sempre a qualidade, a integridade e a segurança dos dados. Fique à vontade para explorar os meus projetos e entrar em contato. Obrigado pela visita!",
-    "hintBlocked": "Toque no play para ouvir minha apresentação"
+    "hintBlocked": "Toque no play para ouvir minha apresentação",
+    "alt": "Caricatura em desenho animado de Lucas Palma, de terno e mãos nos bolsos, sorrindo"
   }
 }

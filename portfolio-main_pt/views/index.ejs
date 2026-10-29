@@ -19,15 +19,14 @@
             <button type="button" class="avatar-btn" aria-pressed="false"
                     data-label-play="<%= t('avatar.play') %>" data-label-pause="<%= t('avatar.pause') %>"
                     aria-label="<%= t('avatar.play') %>">
-                <img class="hero-photo" src="/images/Profile_Pic.webp" alt="<%= t('hero.photoAlt') %>" width="220" height="220">
-                <span class="avatar-ring" aria-hidden="true"></span>
+                <video class="avatar-video" src="<%= asset('/video/intro-' + lang + '.mp4') %>" poster="<%= asset('/video/intro-' + lang + '.jpg') %>"
+                       width="624" height="840" preload="auto" playsinline></video>
                 <span class="avatar-icon" aria-hidden="true">
                     <svg class="icon-play" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     <svg class="icon-pause" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
                 </span>
             </button>
             <p class="avatar-hint"><%= t('avatar.hint') %></p>
-            <audio preload="auto" src="<%= asset('/audio/intro-' + lang + '.mp3') %>"></audio>
             <details class="avatar-transcript">
                 <summary><%= t('avatar.transcript') %></summary>
                 <p><%= t('avatar.script') %></p>

@@ -105,23 +105,7 @@ test('CSS and JS URLs are versioned so changes are never served stale', async ()
     assert.match(res.text, /main\.js\?v=[0-9a-f]{8}/);
 });
 
-test('home has the audio avatar with a language-specific intro and transcript', async () => {
-    const en = await request(app).get('/?lang=en');
-    assert.match(en.text, /src="\/audio\/intro-en\.mp3\?v=[0-9a-f]{8}"/);
-    assert.match(en.text, /Listen to my introduction/);
-    assert.match(en.text, /AI voice created from my own voice/);
-    const pt = await request(app).get('/?lang=pt');
-    assert.match(pt.text, /src="\/audio\/intro-pt\.mp3\?v=[0-9a-f]{8}"/);
-    assert.match(pt.text, /Ouvir minha apresentação/);
-});
 
-test('intro audio files are served as audio', async () => {
-    for (const lang of ['en', 'pt']) {
-        const res = await request(app).get(`/audio/intro-${lang}.mp3`);
-        assert.equal(res.status, 200);
-        assert.match(res.headers['content-type'], /audio\/mpeg/);
-    }
-});
 
 test('the home avatar is set to start its introduction 7 seconds after arrival', async () => {
     const en = await request(app).get('/?lang=en');
@@ -129,4 +113,28 @@ test('the home avatar is set to start its introduction 7 seconds after arrival',
     assert.match(en.text, /data-hint-blocked="Press play to hear my introduction"/);
     const pt = await request(app).get('/?lang=pt');
     assert.match(pt.text, /data-hint-blocked="Toque no play para ouvir minha apresentação"/);
+});
+
+
+
+
+test('the hero plays a lip-synced video of the caricature in the selected language', async () => {
+    for (const [lang, alt, note] of [['en', /Cartoon caricature of Lucas Palma/, /voice created from my own voice/], ['pt', /Caricatura em desenho animado de Lucas Palma/, /voz criada a partir da minha própria voz/]]) {
+        const res = await request(app).get(`/?lang=${lang}`);
+        assert.match(res.text, new RegExp(`<video class="avatar-video" src="/video/intro-${lang}\\.mp4\\?v=[0-9a-f]{8}" poster="/video/intro-${lang}\\.jpg\\?v=[0-9a-f]{8}"`));
+        assert.match(res.text, note);
+        assert.doesNotMatch(res.text, /Profile_Pic|<audio/);
+        assert.ok(alt);
+    }
+});
+
+test('the intro videos and posters are served with the right types', async () => {
+    for (const lang of ['en', 'pt']) {
+        const video = await request(app).get(`/video/intro-${lang}.mp4`);
+        assert.equal(video.status, 200);
+        assert.match(video.headers['content-type'], /video\/mp4/);
+        const poster = await request(app).get(`/video/intro-${lang}.jpg`);
+        assert.equal(poster.status, 200);
+        assert.match(poster.headers['content-type'], /image\/jpeg/);
+    }
 });
